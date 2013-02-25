@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test page</title>
+
+    <script src="click_handler.js"></script>
+
+</head>
+<body>
+<div id="click_here">Click or double click here</div>
+
+<script type="text/javascript">
+    var clicks = 0;
+    function single_click_callback() {
+        alert('single click');
+    }
+    function double_click_callback() {
+        alert('double click');
+    }
+    window.onload = function (){
+        document.getElementById("click_here").addEventListener('click', function(){
+                                    CLICK_HANDLER.detect(single_click_callback, double_click_callback);
+                                });
+    };
+
+
+</script>
+</body>
+</html>
